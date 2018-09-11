@@ -1,4 +1,4 @@
-from searchkey import Search
+from restapi import *
 
 canonical_countries = ['Afghanistan',
 'Albania',

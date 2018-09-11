@@ -1,10 +1,11 @@
 from client import RestClient
+import json, logging, requests
 
 client = RestClient('vu.kevin@csu.fullerton.edu', 'LD87rm8Od9dfWnVn')
 
 # Search class has modules for different functions
 class Search():
-    # https://docs.dataforseo.com/#live-data
+    # https://docs.dataforseo.com/#live-data53
     def volume(self, word, location):
         keywords_list = [
             dict(
@@ -14,21 +15,6 @@ class Search():
             ),
         ]
 
-        response = client.post("/v2/kwrd_sv", dict(data=keywords_list))
-        if response["status"] == "error":
-            print("error. Code: %d Message: %s" % (response["error"]["code"], response["error"]["message"]))
-        else:
-            print(response["results"])
-
-    # https://docs.dataforseo.com/#live-data53
-    def keywords(self, word, location):
-        keywords_list = [
-            dict(
-                language="en",
-                loc_name_canonical=location,
-                keys=word
-            )
-        ]
         response = client.post("/v2/kwrd_for_keywords", dict(data=keywords_list))
         if response["status"] == "error":
             print("error. Code: %d Message: %s" % (response["error"]["code"], response["error"]["message"]))
@@ -36,7 +22,7 @@ class Search():
             print(response["results"])
 
     # https://docs.dataforseo.com/#get-related-keywords
-    def similar_keywords(self, word, location):
+    def keywords_related(self, word, location):
         rnd = Random() #you can set as "index of post_data" your ID, string, etc. we will return it with all results.
         post_data = dict()
 
@@ -44,8 +30,8 @@ class Search():
             keyword=word,
             country_code="US",
             language="en",
-            depth=2,
-            limit=1,
+            depth=1,
+            limit=3,
             offset=0,
             orderby="cpc,desc",
             filters=[
@@ -64,3 +50,26 @@ class Search():
             print("error. Code: %d Message: %s" % (response["error"]["code"], response["error"]["message"]))
         else:
             print(response["results"])
+
+class Trumpia():
+    def __init__(self):
+        self.apiKey = '7f5a72d074cff3222bfa0b079af236fc'
+        self.username 'vuskeedoo'
+        self.header ={'Content-Type':'application/json',
+                        'x-Apikey':self.apiKey}
+
+    def sendEmail(self, to_email, msg_body, msg_subject):
+        url = Trumpia.trmUrl + self.username + '/email'
+        body = {'from':'apisupport@mytrum.com', 'to':to_email,'subject':msg_subject, 'content_html':msg_body}
+        try:
+            resp = requests.request('PUT', url, headers = header, json=body)
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as e:
+            return print('Error: ' + str(e))
+        if 'request_id' in resp.json():
+            print('request id returned')
+            return resp.json()['request_id']
+        else:
+            print('request id not returned')
+            return None
+

@@ -3,6 +3,7 @@ from base64 import b64encode
 from json import loads
 from json import dumps
 
+# Module to connect to dataforseo API
 class RestClient:
     domain = "api.dataforseo.com"
 
