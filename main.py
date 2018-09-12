@@ -4,11 +4,12 @@ from restapi import Search, Trumpia
 api = Search()
 trm = Trumpia()
 
-keys = ['house']
+keys = ['spiderman']
 
 # example functions
 results_k = api.keywords(keys, 'United States')
-print(results_k)
+print(results_k[1])
+print(len(results_k))
 print('-----------------')
 #results_kr = api.keywords_related('waffles','US')
 #print(results_kr)
