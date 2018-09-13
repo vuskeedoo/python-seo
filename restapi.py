@@ -5,21 +5,6 @@ client = RestClient('vu.kevin@csu.fullerton.edu', 'LD87rm8Od9dfWnVn')
 
 # Search class has modules for different functions
 class Search():
-    # https://docs.dataforseo.com/#live-data53
-    def keywords(self, word, location):
-        keywords_list = [
-            dict(
-                language="en",
-                loc_name_canonical=location,
-                keys=word
-            )
-        ]
-        response = client.post("/v2/kwrd_for_keywords", dict(data=keywords_list))
-        if response["status"] == "error":
-            print("error. Code: %d Message: %s" % (response["error"]["code"], response["error"]["message"]))
-        else:
-            return response["results"]
-
     # https://docs.dataforseo.com/#get-related-keywords
     def keywords_related(self, word, location):
         rnd = random.Random() #you can set as "index of post_data" your ID, string, etc. we will return it with all results.
