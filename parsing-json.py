@@ -1,7 +1,9 @@
+from pprint import pprint
 import json
 
-f = open("json.txt","rt")
+with open('seo.json') as seo_data:
+    data = json.load(seo_data)
 
-print(f.read())
+pprint(data)
 
-f.close()
+print(type(data))
