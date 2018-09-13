@@ -6,7 +6,6 @@ client = RestClient('vu.kevin@csu.fullerton.edu', 'LD87rm8Od9dfWnVn')
 # Search class has modules for different functions
 class Search():
     # https://docs.dataforseo.com/#get-related-keywords
-    # keyword finder api
     def keywords_related(self, word, location):
         rnd = random.Random() #you can set as "index of post_data" your ID, string, etc. we will return it with all results.
         post_data = dict()
