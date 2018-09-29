@@ -1,11 +1,10 @@
 from restapi import Search, Trumpia
-import pprint
 
 # initialize object from searchkey.py
 api = Search()
 trm = Trumpia()
 
-keys = ['spiderman']
+keys = ['batman']
 
 # example functions
 # results_k = api.keywords(keys, 'United States')
@@ -13,8 +12,8 @@ keys = ['spiderman']
 #print(len(results_k))
 #print('-----------------')
 results_kr = api.keywords_related(keys[0],'US')
-# print(results_kr)
-pprint(results_kr)
+print(results_kr)
+# print(type(results_kr))
 # print('-------')
 # send email
 #trm.sendEmail('vu.kevin00@gmail.com', 'body message', 'subject')

@@ -1,6 +1,6 @@
 import json
 
-data = json.loads(open('spiderman.json').read())
+data = json.loads(open('batman.json').read())
 
 #print(dicti["29771621"]["related"][1])
 
