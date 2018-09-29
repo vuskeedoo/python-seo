@@ -1,6 +1,6 @@
 import json
 
-dicti = json.load(open('2spiderman.json'))
+dicti = json.load(open('spiderman.json'))
 
 print(dicti["29771621"]["related"][1])
 
