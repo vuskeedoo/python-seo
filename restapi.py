@@ -49,7 +49,7 @@ class Trumpia():
             resp = requests.request('PUT', url, headers =self.header, json=body)
             resp.raise_for_status()
         except requests.exceptions.HTTPError as e:
-            return print('Error: ' + str(e))
+            return ('Error: ' + str(e))
         if 'request_id' in resp.json():
             print('request id returned')
             return resp.json()['request_id']

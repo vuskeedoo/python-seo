@@ -1,9 +1,9 @@
-from pprint import pprint
 import json
 
-with open('seo.json') as seo_data:
-    data = json.load(seo_data)
+dicti = json.load(open('2spiderman.json'))
 
-pprint(data)
+print(dicti["29771621"]["related"][1])
 
-print(type(data))
+print("\n\n\n\n")
+
+print(dicti[next(iter(dicti))]["related"][0])
