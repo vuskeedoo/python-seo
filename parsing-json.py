@@ -1,6 +1,7 @@
 import json
 from restapi import Search
 
+"""
 response = Search()
 
 data = response.keywords_related('superman','US')
@@ -8,8 +9,11 @@ data = response.keywords_related('superman','US')
 data = str(data).replace("'","\"")
 
 data = json.loads(data)
+"""
 
-#data = json.loads(open('batman.json').read())
+data = json.loads(open('superman.json').read())
+
+print(type(data))
 
 #print(dicti["29771621"]["related"][1])
 
@@ -25,4 +29,18 @@ data = json.loads(data)
 #print( data )
 #print(type(data))
 
-print(json.dumps(data, indent=2, sort_keys=False))
+#print(json.dumps(data, indent=2, sort_keys=False))
+
+#print("\n\n\n")
+
+'''
+for k in data[next(iter(data))]:
+	k = dict(k)
+	print(k["related"])
+	print("\n")
+'''
+
+#print( data[next(iter(data))]["related"][0] )
+
+for v in data[next(iter(data))]["related"]:
+	print(v["key"])

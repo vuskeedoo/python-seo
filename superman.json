@@ -1,0 +1,157 @@
+{
+  "23247683": {
+    "post_id": "23247683",
+    "task_id": 90629,
+    "meta": {
+      "keyword": "superman",
+      "depth": 1,
+      "limit": 2,
+      "offset": 0,
+      "orderby": "cpc,desc",
+      "total_count": 11,
+      "result_count": 2
+    },
+    "related": [
+      {
+        "key": "superman",
+        "country_code": "US",
+        "language": "en",
+        "search_volume": 301000,
+        "competition": 0.03325605999315431,
+        "cpc": 1.4633,
+        "history": [
+          {
+            "month": 8,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 7,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 6,
+            "year": 2018,
+            "search_volume": 246000
+          },
+          {
+            "month": 5,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 4,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 3,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 2,
+            "year": 2018,
+            "search_volume": 246000
+          },
+          {
+            "month": 1,
+            "year": 2018,
+            "search_volume": 301000
+          },
+          {
+            "month": 12,
+            "year": 2017,
+            "search_volume": 301000
+          },
+          {
+            "month": 11,
+            "year": 2017,
+            "search_volume": 368000
+          },
+          {
+            "month": 10,
+            "year": 2017,
+            "search_volume": 368000
+          },
+          {
+            "month": 9,
+            "year": 2017,
+            "search_volume": 246000
+          }
+        ]
+      },
+      {
+        "key": "superman clark kent",
+        "country_code": "US",
+        "language": "en",
+        "search_volume": 2900,
+        "competition": 0.02283123507266324,
+        "cpc": 0.959973,
+        "history": [
+          {
+            "month": 8,
+            "year": 2018,
+            "search_volume": 3600
+          },
+          {
+            "month": 7,
+            "year": 2018,
+            "search_volume": 2400
+          },
+          {
+            "month": 6,
+            "year": 2018,
+            "search_volume": 2400
+          },
+          {
+            "month": 5,
+            "year": 2018,
+            "search_volume": 2900
+          },
+          {
+            "month": 4,
+            "year": 2018,
+            "search_volume": 2400
+          },
+          {
+            "month": 3,
+            "year": 2018,
+            "search_volume": 1900
+          },
+          {
+            "month": 2,
+            "year": 2018,
+            "search_volume": 2400
+          },
+          {
+            "month": 1,
+            "year": 2018,
+            "search_volume": 2900
+          },
+          {
+            "month": 12,
+            "year": 2017,
+            "search_volume": 2400
+          },
+          {
+            "month": 11,
+            "year": 2017,
+            "search_volume": 2900
+          },
+          {
+            "month": 10,
+            "year": 2017,
+            "search_volume": 8100
+          },
+          {
+            "month": 9,
+            "year": 2017,
+            "search_volume": 2900
+          }
+        ]
+      }
+    ]
+  }
+}
