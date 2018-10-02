@@ -15,7 +15,7 @@ class Search():
             country_code='US',
             language="en",
             depth=1,
-            limit=3,
+            limit=2,
             offset=0,
             orderby="cpc,desc",
             filters=[
