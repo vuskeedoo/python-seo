@@ -39,8 +39,16 @@ class JsonResponse():
 
 	def sql_string(self, json_data):
 		self.json_data = json_data
+		for v in json_data[next(iter(json_data))]["related"]:
+			print(v["key"])
+			print(v["country_code"])
+			print(v["search_volume"])
+			print(v["cpc"])
+			print(v["competition"])
 		return
 
 json_response = JsonResponse()
 json_search = json_response.json_response()
 json_response.pretty_print(json_search)
+print("------------------")
+json_response.sql_string(json_search)
