@@ -37,7 +37,7 @@ class JsonResponse():
 	def debug(self, json_data):
 		return
 
-	def sql_string(self, json_data):
+	def output_kwrd(self, json_data):
 		self.json_data = json_data
 		for v in json_data[next(iter(json_data))]["related"]:
 			print(v["key"])
@@ -47,8 +47,27 @@ class JsonResponse():
 			print(v["competition"])
 		return
 
+	def sql_statement(self, json_data):
+		self.json_data = json_data
+		self.key_id = 0
+		for v in json_data[next(iter(json_data))]["related"]:
+			key = v["key"]
+			country_code = v["country_code"]
+			search_volume = v["search_volume"]
+			cpc = v["cpc"]
+			competition = v["competition"]
+			key = str(key)
+			country_code = str(country_code)
+			search_volume = str(search_volume)
+			cpc = str(cpc)
+			competition = str(competition)
+			sql = '''INSERT INTO results(key_id,key,country_code,search_volume,cpc,competition) VALUES (%s, %s, %s, %s, %s, %s)''' % (self.key_id, key, country_code,search_volume, cpc, competition)
+			print(sql)
+			self.key_id += 1
+		return
+
 json_response = JsonResponse()
 json_search = json_response.json_response()
 json_response.pretty_print(json_search)
-print("------------------")
-json_response.sql_string(json_search)
+json_response.output_kwrd(json_search)
+json_response.sql_statement(json_search)
