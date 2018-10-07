@@ -29,7 +29,7 @@ class SQLstring():
 
 	def insert_sql(self, json_list):
 		self.sql_tuple = json_list
-		sql = """INSERT INTO results(key, country_code, search_volume, cpc, competition) VALUES (%s,%s,%d,%d,%d) """ % self.sql_tuple
+		sql = """INSERT INTO results(key, country_code, search_volume, cpc, competition) VALUES (%s,%s,%d,%f,%f) """ % self.sql_tuple
 		print(sql)
 		return
 
