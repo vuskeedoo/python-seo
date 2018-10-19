@@ -3,5 +3,4 @@ env/
 __pycache__/client.pyc
 resapi.pyc
 __pycache__/
-_config.yml
 notes.txt
