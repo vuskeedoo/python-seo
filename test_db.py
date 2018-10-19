@@ -4,7 +4,7 @@ from parsing_json import JsonResponse
 sql = SQLString()
 response = JsonResponse()
 
-json_search = response.json_response("black ops iiii", "US")
+json_search = response.json_response("the joker", "US")
 
 print("Searched for: %s" % sql.get_search_key(json_search))
 

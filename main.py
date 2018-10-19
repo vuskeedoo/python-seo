@@ -11,7 +11,7 @@ keys = ['batman']
 #print(results_k[1])
 #print(len(results_k))
 #print('-----------------')
-results_kr = api.keywords_related(keys[0],'US')
+results_kr = api.keywords_related(keys[0],'CA')
 print(results_kr)
 # print(type(results_kr))
 # print('-------')

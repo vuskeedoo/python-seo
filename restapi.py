@@ -12,7 +12,7 @@ class Search():
 
         post_data[rnd.randint(1, 30000000)] = dict(
             keyword=word,
-            country_code='US',
+            country_code=location,
             language="en",
             depth=1,
             limit=2,
