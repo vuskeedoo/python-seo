@@ -28,5 +28,8 @@ for tup in sql_insert_tuple:
 connection.commit()
 print("Insert successful")
 
+print("Get data")
+sql.get_rows(connection)
+
 connection.close()
 print("Closed connection")

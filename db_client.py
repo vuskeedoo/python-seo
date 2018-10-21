@@ -46,3 +46,11 @@ class SQLString():
 		self.key = key
 		sql = """INSERT INTO keys(key) VALUES (\"%s\")""" % self.key
 		return sql
+
+	def get_rows(self, conn):
+		cur = conn.cursor()
+		cur.execute("SELECT * FROM results")
+		data = cur.fetchall()
+		for i in data:
+			print(i)
+		return
