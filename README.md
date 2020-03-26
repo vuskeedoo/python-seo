@@ -6,9 +6,3 @@ Class project for CSUF CPSC 362 Software Engineer.
 * Users search by a keyword, region, and date range.
 * The program will return related keywords and statistics from Google.
 * Keywords can be used as tags in their video content to visibility for searches on Google and Youtube.
-
-## Getting Started
-
-download repository
-
-## Test
